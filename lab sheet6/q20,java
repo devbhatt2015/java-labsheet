@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class InvalidAgeException20 extends Exception {
+ InvalidAgeException20(String message) {
+ super(message);
+ }
+}
+public class q20 {
+ static void validateAge(int age) throws InvalidAgeException20 {
+ if (age < 18 || age > 100) {
+ throw new InvalidAgeException20("Age must be between 18 and 100.");
+ }
+ }
+ public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+ try {
+ System.out.print("Enter age: ");
+ String input = sc.nextLine();
+
+ int age = Integer.parseInt(input);
+ validateAge(age);
+ System.out.println("Valid age: " + age);
+ } catch (NumberFormatException e) {
+ System.out.println("Enter a valid integer age.");
+ } catch (InvalidAgeException20 e) {
+ System.out.println("Invalid age: " + e.getMessage());
+ } finally {
+
+ sc.close();
+ System.out.println("Input resource closed.");
+ }
+ }
+}
