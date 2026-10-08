@@ -29,7 +29,7 @@ public class Q12_EmployeeDeveloperManager {
         Developer d = new Developer();
         Manager m = new Manager();
 
-        d.employeeName = "Vanshika";
+        d.employeeName = "Dev";
         d.employeeId = 101;
         d.programmingLanguage = "Java";
 
