@@ -27,7 +27,7 @@ public class Q11_PersonStudentTeacher {
         Student s = new Student();
         Teacher t = new Teacher();
 
-        s.name = "Vanshika";
+        s.name = "Dev";
         s.course = "BCA";
 
         t.name = "Rahul";
